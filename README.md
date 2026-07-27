@@ -72,3 +72,14 @@ Metrics from OTLP get exported to Prometheus. Traces go to debug logs (swap in J
 docker compose down          # stop everything
 docker compose down -v       # stop + delete all data
 ```
+
+## terraform 
+
+terraform init
+
+terraform validate
+
+terraform plan
+
+terraform apply
+
