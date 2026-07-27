@@ -83,3 +83,49 @@ terraform plan
 
 terraform apply
 
+## Complete Pipeline
+
+
+Developer
+      │
+      ▼
+Git Push (master)
+      │
+      ▼
+CI (ci.yml)
+      │
+      ▼
+Build Frontend
+      │
+      ▼
+Backend Test
+      │
+      ▼
+Docker Build
+      │
+      ▼
+Trivy Security Scan
+      │
+      ▼
+Push Images → Docker Hub
+      │
+      ▼
+CD (cd.yml)
+      │
+      ▼
+SSH into EC2
+      │
+      ▼
+git pull
+      │
+      ▼
+docker compose pull
+      │
+      ▼
+docker compose up -d
+      │
+      ▼
+Notes App Live
+      │
+      ▼
+Prometheus + Grafana + Loki Monitoring
